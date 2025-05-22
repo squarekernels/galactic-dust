@@ -17,8 +17,8 @@ def main():
 
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
-    
-    player = Player(x, y, PLAYER_RADIUS)
+
+    player = Player(x, y, PLAYER_RADIUS, (updatable, drawable))
 
     while True:
         for event in pygame.event.get():

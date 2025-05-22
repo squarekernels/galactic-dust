@@ -1,11 +1,11 @@
 import pygame 
-import circleshape
+from circleshape import CircleShape
 from constants import *
 
-class Player(circleshape.CircleShape, pygame.sprite.Sprite):
+class Player(CircleShape, pygame.sprite.Sprite):
     def __init__(self, x, y, PLAYER_RADIUS, containers):
         pygame.sprite.Sprite.__init__(self, *containers)
-        circleshape.CircleShape.__init__(self, x, y, PLAYER_RADIUS)
+        CircleShape.__init__(self, x, y, PLAYER_RADIUS)
         self.rotation = 0
 
     def triangle(self):
@@ -41,4 +41,4 @@ class Player(circleshape.CircleShape, pygame.sprite.Sprite):
         if keys[pygame.K_s]:
             self.move(-dt)
 
-
+        

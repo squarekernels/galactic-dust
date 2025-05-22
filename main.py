@@ -15,6 +15,9 @@ def main():
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
 
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+    
     player = Player(x, y, PLAYER_RADIUS)
 
     while True:

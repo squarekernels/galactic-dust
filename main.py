@@ -26,8 +26,14 @@ def main():
                 return
         pygame.Surface.fill(screen, (0,0,0))
         dt = clock.tick(60)/1000
-        player.update(dt)
+        
+        updatable.update(dt)
+        
+        for sprite in drawable:
+            sprite.draw(screen)
+        
         player.draw(screen)
+
         pygame.display.flip()
     
 if __name__ == "__main__":
